@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1f5d43;
+  --color-primary-dark: #113b2a;
+  --color-primary-light: #449e78;
+  --color-secondary: #b7e0a4;
+  --color-secondary-dark: #79cc52;
+  --color-secondary-light: #d3e8c9;
+  --color-accent: #f4f6f5;
+  --color-accent-dark: #dce5e1;
+  --color-accent-light: #fafafa;
+  --color-background: #ffffff;
+  --color-text: #1f2937;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-scale: 1.25;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  h1 { font-size: calc(var(--font-size-base) * var(--font-scale) * var(--font-scale) * var(--font-scale)); }
+  h2 { font-size: calc(var(--font-size-base) * var(--font-scale) * var(--font-scale)); }
+  h3 { font-size: calc(var(--font-size-base) * var(--font-scale)); }
+  h4 { font-size: var(--font-size-base); }
+  h5 { font-size: calc(var(--font-size-base) / var(--font-scale)); }
+  h6 { font-size: calc(var(--font-size-base) / var(--font-scale) / var(--font-scale)); }
+}
+
+@layer utilities {
+  .text-primary { color: var(--color-primary); }
+  .text-primary-dark { color: var(--color-primary-dark); }
+  .text-primary-light { color: var(--color-primary-light); }
+  .text-secondary { color: var(--color-secondary); }
+  .text-secondary-dark { color: var(--color-secondary-dark); }
+  .text-secondary-light { color: var(--color-secondary-light); }
+  .text-accent { color: var(--color-accent); }
+  .text-accent-dark { color: var(--color-accent-dark); }
+  .text-accent-light { color: var(--color-accent-light); }
+  .text-background { color: var(--color-background); }
+  .text-foreground { color: var(--color-text); }
+
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-primary-dark { background-color: var(--color-primary-dark); }
+  .bg-primary-light { background-color: var(--color-primary-light); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .bg-secondary-dark { background-color: var(--color-secondary-dark); }
+  .bg-secondary-light { background-color: var(--color-secondary-light); }
+  .bg-accent { background-color: var(--color-accent); }
+  .bg-accent-dark { background-color: var(--color-accent-dark); }
+  .bg-accent-light { background-color: var(--color-accent-light); }
+  .bg-background { background-color: var(--color-background); }
+  .bg-foreground { background-color: var(--color-text); }
+}
